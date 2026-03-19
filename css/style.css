@@ -20,6 +20,9 @@
 
 /* ===== Global ===== */
 body {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100vh !important;
   background-color: var(--sci-bg);
   color: var(--sci-text);
   background-image:
@@ -130,6 +133,11 @@ a.text-primary:hover {
 .navbar .nav-link:hover,
 .navbar .nav-item.active .nav-link {
   text-shadow: 0 0 8px rgba(0, 229, 255, 0.6);
+}
+
+/* ===== Main content flex grow ===== */
+main {
+  flex: 1;
 }
 
 /* ===== Section layout ===== */
