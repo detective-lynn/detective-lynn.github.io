@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Kylin-PBC: Periodic Density Functional Theory Program</title>
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="css/roboto.css" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!--Main Navigation-->
+  <header>
+    <style>
+      @media (min-width: 992px) {
+        #intro {
+          margin-top: -58.59px;
+          height: 50vh !important;
+        }
+      }
+
+      .navbar .nav-link {
+        color: #fff !important;
+      }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+      <div class="container-fluid">
+        <a class="navbar-brand nav-link" target="_blank" href="https://kylin-qc.com">
+          <strong>Kylin-PBC</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="index.html">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="publications.html" target="_self">Publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="files/KylinManual.pdf" target="_self">Manual</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="download.html" target="_self">Download</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html" target="_self">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.html" target="_self">News</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Background image -->
+    <div id="intro" class="bg-image vh-100 shadow-1-strong">
+      <div class="mask">
+        <div class="container d-flex align-items-center justify-content-center text-center h-100">
+          <div class="text-white">
+            <h1 class="mb-3">Kylin-PBC: Periodic DFT from First Principles</h1>
+            <h5 class="mb-4">C++17 &middot; GTO Basis Sets &middot; GTH Pseudopotentials &middot; MGDF / FTDF Integrals</h5>
+            <a class="btn btn-outline-light btn-lg m-2" href="download.html" role="button" rel="nofollow"
+              target="_self">Download Software</a>
+            <a class="btn btn-outline-light btn-lg m-2" href="files/KylinManual.pdf" target="_self" role="button">User Manual</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Background image -->
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main>
+    <!--Section: About-->
+    <section class="section-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 gx-5 mb-4">
+            <h4 class="section-title">About Kylin-PBC</h4>
+            <p class="text-dark"><strong>
+                Kylin-PBC is a periodic Density Functional Theory (DFT) program written in C++17,
+                designed for high-accuracy electronic structure calculations of crystalline and
+                periodic systems.
+              </strong></p>
+            <p class="text-muted">
+              The program employs Gaussian-type orbital (GTO) basis sets with
+              Goedecker-Teter-Hutter (GTH) pseudopotentials, and evaluates Coulomb and
+              exchange integrals via two advanced density fitting schemes:
+              Multigrid Density Fitting (MGDF) and FFT-based Density Fitting (FTDF).
+            </p>
+            <ul class="tech-list">
+              <li>
+                <span>Exchange-correlation functionals via Libxc:
+                  <span class="feature-tag">LDA</span>
+                  <span class="feature-tag">GGA</span>
+                  <span class="feature-tag">meta-GGA</span>
+                  <span class="feature-tag">Hybrid</span>
+                  <span class="feature-tag">RSH</span>
+                </span>
+              </li>
+              <li>
+                <span>Monkhorst-Pack k-point sampling and Gamma-point solvers
+                  <span class="feature-tag">GRKS</span>
+                  <span class="feature-tag">KRKS</span>
+                </span>
+              </li>
+              <li>
+                <span>Adaptively Compressed Exchange (ACE) acceleration for hybrid functionals
+                  <span class="feature-tag">ACE</span>
+                </span>
+              </li>
+              <li>
+                <span>Geometry optimization: BFGS quasi-Newton with trust radius control
+                  <span class="feature-tag">BFGS</span>
+                  <span class="feature-tag">GDIIS</span>
+                </span>
+              </li>
+              <li>
+                <span>Occupation smearing schemes
+                  <span class="feature-tag">Fermi-Dirac</span>
+                  <span class="feature-tag">Gaussian</span>
+                  <span class="feature-tag">Methfessel-Paxton</span>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 gx-5 mb-4 d-flex align-items-center justify-content-center">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="img/kylin_logo.png" class="img-fluid" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Section: About-->
+
+    <!--Section: Technical Capabilities-->
+    <section class="section-block section-alt text-center">
+      <div class="container">
+        <h4 class="section-title-center">Technical Capabilities</h4>
+        <p class="section-subtitle">Core algorithmic components powering Kylin-PBC</p>
+        <div class="feature-grid">
+
+          <div class="feature-card text-start">
+            <span class="feature-card-icon">&#9883;</span>
+            <h5>Exchange-Correlation Functionals</h5>
+            <p>
+              Full hierarchy of Kohn-Sham DFT approximations through Libxc integration.
+              Supports local density approximation through range-separated hybrids,
+              enabling systematic accuracy benchmarking across Jacob's ladder.
+            </p>
+            <div>
+              <span class="feature-tag">PBE</span>
+              <span class="feature-tag">SCAN</span>
+              <span class="feature-tag">B3LYP</span>
+              <span class="feature-tag">PBE0</span>
+              <span class="feature-tag">HSE06</span>
+              <span class="feature-tag">HF</span>
+            </div>
+          </div>
+
+          <div class="feature-card text-start">
+            <span class="feature-card-icon">&#9670;</span>
+            <h5>Brillouin Zone Sampling</h5>
+            <p>
+              Monkhorst-Pack k-point meshes with automatic dispatch between Gamma-point
+              (real-valued GRKS) and general k-point (complex-valued KRKS) solvers
+              for optimal memory and computational efficiency.
+            </p>
+            <div>
+              <span class="feature-tag">GRKS</span>
+              <span class="feature-tag">KRKS</span>
+              <span class="feature-tag">MP-mesh</span>
+            </div>
+          </div>
+
+          <div class="feature-card text-start">
+            <span class="feature-card-icon">&#8747;</span>
+            <h5>Integral Algorithms</h5>
+            <p>
+              Two complementary density fitting schemes: Multigrid Density Fitting (MGDF)
+              for Coulomb and pseudopotential matrix evaluation, and FFT-based Density
+              Fitting (FTDF) for efficient exact exchange computation.
+            </p>
+            <div>
+              <span class="feature-tag">MGDF</span>
+              <span class="feature-tag">FTDF</span>
+            </div>
+          </div>
+
+          <div class="feature-card text-start">
+            <span class="feature-card-icon">&#9889;</span>
+            <h5>ACE Acceleration</h5>
+            <p>
+              Adaptively Compressed Exchange (ACE) operator with optional Cholesky
+              decomposition dramatically reduces the cost of hybrid functional SCF
+              iterations while preserving numerical accuracy.
+            </p>
+            <div>
+              <span class="feature-tag">ACE</span>
+              <span class="feature-tag">Cholesky</span>
+              <span class="feature-tag">Ewald-X</span>
+            </div>
+          </div>
+
+          <div class="feature-card text-start">
+            <span class="feature-card-icon">&#8711;</span>
+            <h5>Geometry Optimization</h5>
+            <p>
+              Analytical nuclear gradient-driven structural relaxation with BFGS
+              quasi-Newton Hessian updates, trust-radius step control, and
+              GDIIS/GEDIIS geometry extrapolation for accelerated convergence.
+            </p>
+            <div>
+              <span class="feature-tag">BFGS</span>
+              <span class="feature-tag">RFO</span>
+              <span class="feature-tag">GDIIS</span>
+              <span class="feature-tag">GEDIIS</span>
+            </div>
+          </div>
+
+          <div class="feature-card text-start">
+            <span class="feature-card-icon">&#8652;</span>
+            <h5>SCF Convergence Engine</h5>
+            <p>
+              Multi-level mixing framework operating on density matrix, electron density,
+              and Hamiltonian simultaneously. Broyden and DIIS algorithms with configurable
+              history depth and fractional occupation smearing.
+            </p>
+            <div>
+              <span class="feature-tag">Broyden</span>
+              <span class="feature-tag">DIIS</span>
+              <span class="feature-tag">Fermi-Dirac</span>
+              <span class="feature-tag">MP</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!--Section: Technical Capabilities-->
+
+    <!--Section: Quick Start-->
+    <section class="section-block">
+      <div class="container">
+        <h4 class="section-title">Quick Start</h4>
+        <p class="text-muted" style="margin-bottom: 2rem;">
+          Kylin-PBC requires two input files in the working directory: <strong>cell.txt</strong>
+          (unit cell and atomic positions) and <strong>calc.txt</strong> (calculation parameters).
+          Below is a minimal example for a silicon diamond single-point calculation.
+        </p>
+        <div class="quickstart-grid">
+          <div class="code-panel">
+            <span class="code-panel-label">cell.txt</span>
+            <pre><span class="code-comment"># Silicon diamond &mdash; lattice vectors (Angstrom)</span>
+3.8396000862    0.0000000000    0.0000000000
+1.9198000431    3.3251912150    0.0000000000
+1.9198000431    1.1083970717    3.1350203425
+<span class="code-keyword">Cart</span>
+Si  0.000000000    0.000000000    0.000000000
+Si  1.919800043    1.108397072    0.783755086</pre>
+          </div>
+          <div class="code-panel">
+            <span class="code-panel-label">calc.txt</span>
+            <pre><span class="code-keyword">SCF.xcfun</span>     = <span class="code-value">PBE</span>
+<span class="code-keyword">SCF.basis</span>     = <span class="code-value">gth-molopt-dzvp-sr</span>
+<span class="code-keyword">SCF.psudo</span>     = <span class="code-value">gth-pbe</span>
+<span class="code-keyword">SCF.kmesh</span>     = <span class="code-value">3 3 3</span>
+<span class="code-keyword">SCF.max_cycle</span> = <span class="code-value">100</span>
+<span class="code-keyword">SCF.eps_engy</span>  = <span class="code-value">1e-8 [eV]</span>
+<span class="code-keyword">SCF.hks_mix_method</span> = <span class="code-value">BROY</span>
+<span class="code-keyword">SCF.smear_method</span>  = <span class="code-value">fermi</span>
+<span class="code-keyword">SCF.smear_sigma</span>   = <span class="code-value">300 [K]</span></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Section: Quick Start-->
+
+    <!--Section: Output Format-->
+    <section class="section-block section-alt">
+      <div class="container">
+        <h4 class="section-title">Structured Output</h4>
+        <p class="text-muted" style="margin-bottom: 2rem;">
+          Each SCF iteration produces machine-parseable tagged output lines for
+          electron count validation, energy decomposition, and convergence monitoring.
+        </p>
+        <div class="output-block">
+<span class="out-tag">[NELEC]</span> <span class="out-key">step</span> = <span class="out-val">12</span>  <span class="out-key">nelec</span> = <span class="out-val">8</span>  <span class="out-key">neInt</span> = <span class="out-val">7.99998</span>  <span class="out-key">dnelc</span> = <span class="out-val">-2.1e-05</span>
+<span class="out-tag">[ENERG]</span> <span class="out-key">step</span> = <span class="out-val">12</span>  <span class="out-key">eTotl</span> = <span class="out-val">-7.85623</span>  <span class="out-key">eCore</span> = <span class="out-val">3.21456</span>  <span class="out-key">eCoul</span> = <span class="out-val">-1.52341</span>  <span class="out-key">eExcl</span> = <span class="out-val">-2.34521</span>
+<span class="out-tag">[ERROR]</span> <span class="out-key">step</span> = <span class="out-val">12</span>  <span class="out-key">engy error</span> = <span class="out-val">3.2e-09</span>  <span class="out-key">grad error</span> = <span class="out-val">1.1e-06</span>  <span class="out-key">dmat error</span> = <span class="out-val">4.7e-05</span>
+
+SCF converged in 12 steps.
+        </div>
+      </div>
+    </section>
+    <!--Section: Output Format-->
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="text-lg-start">
+    <div class="text-center p-3">
+      &copy; 2025 Copyright:
+      <a href="https://quantum-chemistry-cn.com">The Prof. Haibo Ma Group</a>
+    </div>
+  </footer>
+  <!--Footer-->
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
