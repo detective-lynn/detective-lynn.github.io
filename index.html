@@ -33,14 +33,14 @@
     </style>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="z-index: 2000;">
       <div class="container-fluid">
         <a class="navbar-brand nav-link" target="_blank" href="https://kylin-pbc.com">
           <strong>Kylin-PBC</strong>
         </a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
           aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-bars"></i>
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarExample01">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -63,8 +63,10 @@
               <a class="nav-link" href="news.html" target="_self" data-i18n="nav.news">News</a>
             </li>
           </ul>
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">&#9790;</button>
-          <button id="lang-toggle" class="lang-toggle-btn" aria-label="Toggle language">EN</button>
+          <div class="nav-actions">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">&#9790;</button>
+            <button id="lang-toggle" class="lang-toggle-btn" aria-label="Toggle language">EN</button>
+          </div>
         </div>
       </div>
     </nav>
@@ -74,12 +76,14 @@
     <div id="intro" class="bg-image vh-100 shadow-1-strong">
       <div class="mask">
         <div class="container d-flex align-items-center justify-content-center text-center h-100">
-          <div class="text-white">
+          <div class="text-white hero-content">
             <h1 class="mb-3" data-i18n="hero.title">Kylin-PBC: Periodic DFT from First Principles</h1>
             <h5 class="mb-4" data-i18n="hero.subtitle">C++17 &middot; GTO Basis Sets &middot; GTH Pseudopotentials &middot; MGDF / FTDF Integrals</h5>
-            <a class="btn btn-outline-light btn-lg m-2" href="download.html" role="button" rel="nofollow"
-              target="_self" data-i18n="hero.btn.download">Download Software</a>
-            <a class="btn btn-outline-light btn-lg m-2" href="files/KylinManual.pdf" target="_self" role="button" data-i18n="hero.btn.manual">User Manual</a>
+            <div class="hero-actions">
+              <a class="btn btn-outline-light btn-lg m-2" href="download.html" role="button" rel="nofollow"
+                target="_self" data-i18n="hero.btn.download">Download Software</a>
+              <a class="btn btn-outline-light btn-lg m-2" href="files/KylinManual.pdf" target="_self" role="button" data-i18n="hero.btn.manual">User Manual</a>
+            </div>
           </div>
         </div>
       </div>
@@ -311,8 +315,8 @@ Si  1.919800043    1.108397072    0.783755086</pre>
   <!--Footer-->
   <!-- MDB -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Custom scripts -->
-  <script type="text/javascript" src="js/script.js"></script>
+  <!-- Mobile interactions -->
+  <script type="text/javascript" src="js/mobile-ui.js"></script>
   <!-- Theme switcher -->
   <script type="text/javascript" src="js/theme.js"></script>
   <!-- Language switcher -->

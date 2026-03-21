@@ -69,6 +69,20 @@ html {
   color: #334155 !important;
 }
 
+.navbar-toggler {
+  color: #ffffff;
+}
+
+.navbar-toggler-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.92)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar.navbar-scrolled {
+  background: rgba(10, 14, 26, 0.9) !important;
+}
+
 [data-theme="light"] .navbar-brand strong {
   color: #0891B2 !important;
   text-shadow: none;
@@ -80,6 +94,18 @@ html {
   text-shadow: none;
 }
 
+[data-theme="light"] .navbar-toggler {
+  color: #334155;
+}
+
+[data-theme="light"] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(51,65,85,0.92)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+[data-theme="light"] .navbar.navbar-scrolled {
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
 /* === Light-mode hero text remains white (over gradient) === */
 [data-theme="light"] #intro h1 {
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
@@ -87,6 +113,19 @@ html {
 
 [data-theme="light"] #intro h5 {
   color: rgba(255, 255, 255, 0.85);
+}
+
+/* === Light-mode hero buttons: softer blue for harmony === */
+[data-theme="light"] #intro .btn-outline-light {
+  border-color: #3E6287;
+  color: #3E6287;
+  border-width: 2px;
+}
+
+[data-theme="light"] #intro .btn-outline-light:hover {
+  background-color: #355879;
+  color: #ffffff;
+  box-shadow: 0 0 18px rgba(62, 98, 135, 0.32);
 }
 
 /* === Theme toggle button === */
