@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Kylin-PBC Logo 方案预览</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8fafc; color: #333; display: flex; flex-direction: column; align-items: center; padding: 40px; }
+        .logo-container { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); width: 600px; display: flex; flex-direction: column; align-items: center; }
+        .desc { text-align: center; margin-bottom: 20px; font-size: 14px; color: #64748b; }
+        svg { width: 100%; max-width: 400px; height: auto; border: 1px dashed #cbd5e1; background: #fafafa; }
+    </style>
+</head>
+<body>
+
+    <svg width="0" height="0" style="position:absolute;">
+        <defs>
+            <clipPath id="dragon-only" clipPathUnits="objectBoundingBox">
+                <polygon points="0,0 1,0 1,0.75 0.65,0.75 0.65,1 0,1" />
+            </clipPath>
+        </defs>
+    </svg>
+
+    <div class="logo-container">
+        <h2>方案一：晶胞嵌套 (Unit Cell)</h2>
+        <p class="desc">将孤立的麒麟置于三维等距晶胞中，最直白地体现从“分子体系”到“周期性晶体体系”的跨越。</p>
+        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="#0ea5e9" stroke-width="1.5" fill="none" opacity="0.6">
+                <polygon points="60,20 100,35 100,85 60,70" fill="#e0f2fe" fill-opacity="0.3"/>
+                <polygon points="20,35 60,20 100,35 60,50" fill="#bae6fd" fill-opacity="0.2"/>
+                <path d="M20,35 L20,85 L60,100 L100,85 M20,85 L60,70 M60,100 L60,70 M20,35 L60,50 L100,35 M60,50 L60,70" />
+                <circle cx="60" cy="20" r="2.5" fill="#0ea5e9" /><circle cx="20" cy="35" r="2.5" fill="#0ea5e9" />
+                <circle cx="100" cy="35" r="2.5" fill="#0ea5e9" /><circle cx="60" cy="50" r="2.5" fill="#0ea5e9" />
+                <circle cx="20" cy="85" r="2.5" fill="#0ea5e9" /><circle cx="60" cy="100" r="2.5" fill="#0ea5e9" />
+                <circle cx="100" cy="85" r="2.5" fill="#0ea5e9" /><circle cx="60" cy="70" r="2.5" fill="#0ea5e9" />
+            </g>
+
+            <g transform="translate(30, 25) scale(0.6)">
+                <image href="e3e7021d41fc5ff2903f38c413aaeac9.png" width="100" height="100" clip-path="url(#dragon-only)" />
+            </g>
+
+            <text x="120" y="60" font-family="Arial, sans-serif" font-size="20" font-weight="900" fill="#004b97">Kylin</text>
+            <rect x="120" y="70" width="38" height="16" fill="#0ea5e9" rx="3" />
+            <text x="139" y="82" font-family="monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">PBC</text>
+        </svg>
+    </div>
+
+    <div class="logo-container">
+        <h2>方案二：平移边界 (Translational Symmetry)</h2>
+        <p class="desc">利用虚线 Simulation Box 以及左右穿透的半透明虚影，精准表达周期性边界条件的物理含义。</p>
+        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+            <rect x="35" y="15" width="80" height="90" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 5" rx="4"/>
+            
+            <g transform="translate(-50, 20) scale(0.8)" opacity="0.3">
+                <image href="e3e7021d41fc5ff2903f38c413aaeac9.png" width="100" height="100" clip-path="url(#dragon-only)" />
+            </g>
+            <g transform="translate(30, 20) scale(0.8)">
+                <image href="e3e7021d41fc5ff2903f38c413aaeac9.png" width="100" height="100" clip-path="url(#dragon-only)" />
+            </g>
+            <g transform="translate(110, 20) scale(0.8)" opacity="0.3">
+                <image href="e3e7021d41fc5ff2903f38c413aaeac9.png" width="100" height="100" clip-path="url(#dragon-only)" />
+            </g>
+
+            <text x="125" y="65" font-family="Arial, sans-serif" font-size="22" font-weight="900" fill="#004b97">Kylin<tspan fill="#64748b" font-weight="normal">-PBC</tspan></text>
+        </svg>
+    </div>
+
+</body>
+</html>

@@ -5,13 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Kylin: An Ab-Initio Quantum Chemistry Package</title>
+    <title>Kylin-PBC: Periodic Density Functional Theory Program</title>
     <!-- Google Fonts Roboto -->
     <link rel="stylesheet" href="css/roboto.css" />
     <!-- MDB -->
     <link rel="stylesheet" href="css/mdb.min.css" />
     <!-- Custom styles -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Theme switcher -->
+    <link rel="stylesheet" href="css/theme.css" />
 </head>
 
 <body>
@@ -27,7 +29,7 @@
             }
 
             .navbar .nav-link {
-                color: #fff !important;
+                color: var(--sci-heading) !important;
             }
         </style>
 
@@ -35,7 +37,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
             <div class="container-fluid">
                 <!-- Navbar brand -->
-                <a class="navbar-brand nav-link" target="_blank" href="https://kylin-qc.com">
+                <a class="navbar-brand nav-link" target="_blank" href="https://kylin-pbc.com">
                     <strong>Kylin</strong>
                 </a>
                 <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
@@ -46,24 +48,26 @@
                 <div class="collapse navbar-collapse" id="navbarExample01">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html" target="_self">Features</a>
+                            <a class="nav-link" href="index.html" target="_self" data-i18n="nav.features">Features</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="publications.html" target="_self">Publications</a>
+                            <a class="nav-link" href="publications.html" target="_self" data-i18n="nav.publications">Publications</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="files/KylinManual.pdf" target="_self">Manual</a>
+                            <a class="nav-link" href="files/KylinManual.pdf" target="_self" data-i18n="nav.manual">Manual</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="download.html" target="_self">Download</a>
+                            <a class="nav-link" href="download.html" target="_self" data-i18n="nav.download">Download</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" aria-current="page" href="about.html">About</a>
+                            <a class="nav-link" aria-current="page" href="about.html" data-i18n="nav.about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="news.html" target="_self">News</a>
+                            <a class="nav-link" href="news.html" target="_self" data-i18n="nav.news">News</a>
                         </li>
                     </ul>
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">&#9790;</button>
+                    <button id="lang-toggle" class="lang-toggle-btn" aria-label="Toggle language">EN</button>
                 </div>
             </div>
         </nav>
@@ -74,12 +78,12 @@
             <div class="mask">
                 <div class="container d-flex align-items-center justify-content-center text-center h-100">
                     <div class="text-white">
-                        <h1 class="mb-3">Kylin: An Ab-Initio Quantum Chemistry Package</h1>
-                        <h5 class="mb-4">Especially Developed for DMRG-Based Methods</h5>
+                        <h1 class="mb-3" data-i18n="hero.title">Kylin-PBC: Periodic DFT from First Principles</h1>
+                        <h5 class="mb-4" data-i18n="hero.subtitle">C++17 &middot; GTO Basis Sets &middot; GTH Pseudopotentials &middot; MGDF / FTDF Integrals</h5>
                         <a class="btn btn-outline-light btn-lg m-2" href="download.html" role="button" rel="nofollow"
-                            target="_self">Download Software</a>
+                            target="_self" data-i18n="hero.btn.download">Download Software</a>
                         <a class="btn btn-outline-light btn-lg m-2" href="files/KylinManual.pdf" target="_self"
-                            role="button">Get User Guide</a>
+                            role="button" data-i18n="hero.btn.manual">Get User Guide</a>
                     </div>
                 </div>
             </div>
@@ -93,7 +97,7 @@
         <!--Section: Team-->
         <section class="section-block">
             <div class="container">
-                <h4 class="section-title">The Kylin Developer Team</h4>
+                <h4 class="section-title" data-i18n="about.team.title">The Kylin Developer Team</h4>
                 <div class="row">
                     <div class="col-md-6 gx-5 mb-4">
                         <div class="content-card" style="padding: 0; overflow: hidden;">
@@ -107,26 +111,26 @@
                     </div>
                     <div class="col-md-6 gx-5 mb-4">
                         <div class="content-card">
-                            <p class="text-dark"><strong>
+                            <p class="text-dark"><strong data-i18n="about.team.intro">
                                     Kylin is developed by the research group of Prof. Dr. Haibo Ma.
                                     The developers are
                                 </strong></p>
                             <ul>
-                                <li>Dr. Yinxuan Song (Post-doc researcher);</li>
-                                <li>Mr. Xinyu Sun (Phd student);</li>
-                                <li>Mr. Jiaao Su (Graduate student);</li>
-                                <li>Mr. Wei Huang (Graduate student);</li>
-                                <li>Mr. Zhaoxuan Xie (now Phd student at LMU München);</li>
-                                <li>Dr. Yifan Cheng (now Post-doc researcher at MPI-FKF);</li>
-                                <li>Dr. Yingqi Tian (now Post-doc researcher at Computer Network Information Center,
+                                <li data-i18n="about.team.member1">Dr. Yinxuan Song (Post-doc researcher);</li>
+                                <li data-i18n="about.team.member2">Mr. Xinyu Sun (Phd student);</li>
+                                <li data-i18n="about.team.member3">Mr. Jiaao Su (Graduate student);</li>
+                                <li data-i18n="about.team.member4">Mr. Wei Huang (Graduate student);</li>
+                                <li data-i18n="about.team.member5">Mr. Zhaoxuan Xie (now Phd student at LMU München);</li>
+                                <li data-i18n="about.team.member6">Dr. Yifan Cheng (now Post-doc researcher at MPI-FKF);</li>
+                                <li data-i18n="about.team.member7">Dr. Yingqi Tian (now Post-doc researcher at Computer Network Information Center,
                                     Chinese Academy of Sciences);</li>
-                                <li>Mr. Fangwen Peng (now at Dreame Technology);</li>
-                                <li>Mr. Jianhao Li (now Phd student at University of Minnesota);</li>
-                                <li>Mr. Lingzhi Zhang (now graduate student at University of Tokyo);</li>
-                                <li>Dr. Yingjin Ma (now researcher at Computer Network Information Center, Chinese
+                                <li data-i18n="about.team.member8">Mr. Fangwen Peng (now at Dreame Technology);</li>
+                                <li data-i18n="about.team.member9">Mr. Jianhao Li (now Phd student at University of Minnesota);</li>
+                                <li data-i18n="about.team.member10">Mr. Lingzhi Zhang (now graduate student at University of Tokyo);</li>
+                                <li data-i18n="about.team.member11">Dr. Yingjin Ma (now researcher at Computer Network Information Center, Chinese
                                     Academy of Sciences);</li>
-                                <li>Dr. Zhen Luo (now at BDF Qingdao Technology);</li>
-                                <li>Prof. Dr. Haibo Ma.</li>
+                                <li data-i18n="about.team.member12">Dr. Zhen Luo (now at BDF Qingdao Technology);</li>
+                                <li data-i18n="about.team.member13">Prof. Dr. Haibo Ma.</li>
                             </ul>
                         </div>
                     </div>
@@ -138,19 +142,19 @@
         <!--Section: Research-->
         <section class="section-block section-alt">
             <div class="container">
-                <h4 class="section-title">Research Directions</h4>
+                <h4 class="section-title" data-i18n="about.research.title">Research Directions</h4>
                 <div class="content-card-highlight">
-                    <p class="text-muted">
+                    <p class="text-muted" data-i18n="about.research.desc">
                         Ma group is dedicated to developing new chemical methods for strongly correlated quantum
                         systems and excited systems and applications.
                         We are focusing on the study of:
                     </p>
                     <ul>
-                        <li>electronic structure of strongly correlated quantum systems;</li>
-                        <li>quantum dynamics simulation and spectroscopy;</li>
-                        <li>optoelectronics and photocatalysis.</li>
+                        <li data-i18n="about.research.item1">electronic structure of strongly correlated quantum systems;</li>
+                        <li data-i18n="about.research.item2">quantum dynamics simulation and spectroscopy;</li>
+                        <li data-i18n="about.research.item3">optoelectronics and photocatalysis.</li>
                     </ul>
-                    <p class="text-dark mb-0">
+                    <p class="text-dark mb-0" data-i18n-html="about.research.visit">
                         Please visit the group website
                         <a href="https://quantum-chemistry-cn.com">https://quantum-chemistry-cn.com</a>
                         for more information.
@@ -165,7 +169,7 @@
     <!--Footer-->
     <footer class="text-lg-start">
         <!-- Copyright -->
-        <div class="text-center p-3">
+        <div class="text-center p-3" data-i18n-html="footer.copyright">
             © 2026 Copyright:
             <a href="https://quantum-chemistry-cn.com">The Prof. Haibo Ma Group</a>
         </div>
@@ -176,6 +180,10 @@
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Custom scripts -->
     <script type="text/javascript" src="js/script.js"></script>
+    <!-- Theme switcher -->
+    <script type="text/javascript" src="js/theme.js"></script>
+    <!-- Language switcher -->
+    <script type="text/javascript" src="js/i18n.js"></script>
 </body>
 
 </html>

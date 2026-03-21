@@ -1,0 +1,160 @@
+/* === Theme Variables === */
+
+:root,
+[data-theme="dark"] {
+  --sci-bg: #0a0e1a;
+  --sci-bg-light: #101828;
+  --sci-accent: #00e5ff;
+  --sci-accent-rgb: 0, 229, 255;
+  --sci-glass: rgba(15, 20, 40, 0.75);
+  --sci-glass-border: rgba(0, 229, 255, 0.12);
+  --sci-text: #e0e6ed;
+  --sci-text-muted: #8a9ab5;
+  --sci-heading: #ffffff;
+  --sci-hero-mask: linear-gradient(
+    135deg,
+    rgba(6, 10, 28, 0.92),
+    rgba(0, 40, 60, 0.88) 50%,
+    rgba(0, 229, 255, 0.25) 100%
+  );
+  --sci-navbar-bg: rgba(10, 14, 26, 0.7);
+  --sci-navbar-border: rgba(0, 229, 255, 0.15);
+  --sci-footer-bg: #101828;
+  --sci-grid-line: rgba(0, 229, 255, 0.03);
+  --sci-card-shadow: rgba(0, 0, 0, 0.3);
+  --sci-highlight-bg: linear-gradient(135deg, rgba(0, 229, 255, 0.06), rgba(0, 100, 140, 0.1));
+  --sci-highlight-border: rgba(0, 229, 255, 0.2);
+  --sci-code-bg: rgba(8, 12, 24, 0.9);
+  --sci-code-border: rgba(0, 229, 255, 0.15);
+  --sci-scrollbar-thumb: rgba(0, 229, 255, 0.2);
+  --sci-scrollbar-hover: rgba(0, 229, 255, 0.4);
+}
+
+[data-theme="light"] {
+  --sci-bg: #F4F7FA;
+  --sci-bg-light: #E8EDF2;
+  --sci-accent: #0891B2;
+  --sci-accent-rgb: 8, 145, 178;
+  --sci-glass: rgba(255, 255, 255, 0.85);
+  --sci-glass-border: rgba(8, 145, 178, 0.15);
+  --sci-text: #334155;
+  --sci-text-muted: #64748B;
+  --sci-heading: #0F172A;
+  --sci-hero-mask: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.88),
+    rgba(8, 145, 178, 0.75) 50%,
+    rgba(8, 145, 178, 0.35) 100%
+  );
+  --sci-navbar-bg: rgba(255, 255, 255, 0.85);
+  --sci-navbar-border: rgba(8, 145, 178, 0.18);
+  --sci-footer-bg: #E8EDF2;
+  --sci-grid-line: rgba(8, 145, 178, 0.04);
+  --sci-card-shadow: rgba(0, 0, 0, 0.08);
+  --sci-highlight-bg: linear-gradient(135deg, rgba(8, 145, 178, 0.06), rgba(8, 145, 178, 0.1));
+  --sci-highlight-border: rgba(8, 145, 178, 0.25);
+  --sci-code-bg: rgba(15, 23, 42, 0.06);
+  --sci-code-border: rgba(8, 145, 178, 0.15);
+  --sci-scrollbar-thumb: rgba(8, 145, 178, 0.25);
+  --sci-scrollbar-hover: rgba(8, 145, 178, 0.45);
+}
+
+/* === Smooth transition === */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* === Light-mode navbar text fix === */
+[data-theme="light"] .navbar .nav-link {
+  color: #334155 !important;
+}
+
+[data-theme="light"] .navbar-brand strong {
+  color: #0891B2 !important;
+  text-shadow: none;
+}
+
+[data-theme="light"] .navbar .nav-link:hover,
+[data-theme="light"] .navbar .nav-item.active .nav-link {
+  color: #0891B2 !important;
+  text-shadow: none;
+}
+
+/* === Light-mode hero text remains white (over gradient) === */
+[data-theme="light"] #intro h1 {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] #intro h5 {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* === Theme toggle button === */
+.theme-toggle-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--sci-accent);
+  color: var(--sci-accent);
+  box-shadow: 0 0 10px rgba(var(--sci-accent-rgb), 0.3);
+}
+
+[data-theme="light"] .theme-toggle-btn {
+  border-color: rgba(8, 145, 178, 0.3);
+  color: #334155;
+}
+
+[data-theme="light"] .theme-toggle-btn:hover {
+  border-color: #0891B2;
+  color: #0891B2;
+}
+
+/* === Language toggle button === */
+.lang-toggle-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.lang-toggle-btn:hover {
+  border-color: var(--sci-accent);
+  color: var(--sci-accent);
+  box-shadow: 0 0 10px rgba(var(--sci-accent-rgb), 0.3);
+}
+
+[data-theme="light"] .lang-toggle-btn {
+  border-color: rgba(8, 145, 178, 0.3);
+  color: #334155;
+}
+
+[data-theme="light"] .lang-toggle-btn:hover {
+  border-color: #0891B2;
+  color: #0891B2;
+}

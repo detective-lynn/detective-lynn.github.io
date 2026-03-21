@@ -1,0 +1,42 @@
+/* static/css/theme.css */
+:root {
+  --bg-color: #F8FAFC;
+  --text-color: #334155;
+  --primary-color: #0F172A; 
+  --button-text: #FFFFFF;
+  --navbar-bg: #FFFFFF;
+  --border-color: #E2E8F0;
+}
+
+[data-theme="dark"] {
+  --bg-color: #0F172A;
+  --text-color: #E2E8F0;
+  --primary-color: #38BDF8;
+  --button-text: #0F172A;
+  --navbar-bg: #0F172A;
+  --border-color: #334155;
+}
+
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* 主题切换按钮样式 */
+.theme-toggle-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
