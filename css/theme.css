@@ -101,6 +101,7 @@ html {
 
 [data-theme="light"] .navbar-toggler {
   color: #334155;
+  border-color: rgba(51, 65, 85, 0.4);
 }
 
 [data-theme="light"] .navbar-toggler-icon {
