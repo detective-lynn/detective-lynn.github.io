@@ -70,15 +70,15 @@ html {
 }
 
 .navbar-toggler {
-  color: #ffffff;
-  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  color: #b0b8c4;
+  border: 1.5px solid rgba(176, 184, 196, 0.5);
 }
 
 .navbar-toggler-icon {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23f0f0f0' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23b0b8c4' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
