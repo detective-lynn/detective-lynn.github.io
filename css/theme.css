@@ -203,3 +203,13 @@ html {
   border-color: #0891B2;
   color: #0891B2;
 }
+
+/* 强制深色模式下的汉堡菜单图标反色变亮 (变白/浅灰) */
+[data-theme="dark"] .navbar-toggler-icon {
+  filter: invert(1) brightness(80%);
+}
+
+/* 可选：给深色模式下的点击按钮加一个半透明的边框，让它更明显 */
+[data-theme="dark"] .navbar-toggler {
+  border-color: rgba(176, 184, 196, 0.5); /* 浅灰色边框 */
+}
