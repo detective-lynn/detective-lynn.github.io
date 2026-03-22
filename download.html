@@ -2,157 +2,136 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Kylin-PBC: Periodic Density Functional Theory Program</title>
-    <!-- Google Fonts Roboto -->
-    <link rel="stylesheet" href="css/roboto.css" />
-    <!-- MDB -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- Theme switcher -->
-    <link rel="stylesheet" href="css/theme.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Kylin-PBC: Periodic Density Functional Theory Program</title>
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="css/roboto.css" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Theme switcher -->
+  <link rel="stylesheet" href="css/theme.css" />
 </head>
 
 <body>
-    <!--Main Navigation-->
-    <header>
-        <style>
-            /* Height for devices larger than 576px */
-            @media (min-width: 992px) {
-                #intro {
-                    margin-top: -58.59px;
-                    height: 50vh !important;
-                }
-            }
-
-            .navbar .nav-link {
-                color: var(--sci-heading) !important;
-            }
-        </style>
-
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark" style="z-index: 2000;">
-            <div class="container-fluid">
-                <!-- Navbar brand -->
-                <a class="navbar-brand nav-link" target="_blank" href="https://kylin-pbc.com">
-                    <strong>Kylin-PBC</strong>
-                </a>
-                <button class="navbar-toggler" type="button"
-                    aria-controls="navbarExample01" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarExample01">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html" target="_self" data-i18n="nav.features">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="publications.html" target="_self" data-i18n="nav.publications">Publications</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="files/KylinManual.pdf" target="_self" data-i18n="nav.manual">Manual</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" aria-current="page" href="download.html" data-i18n="nav.download">Download</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html" target="_self" data-i18n="nav.about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="news.html" target="_self" data-i18n="nav.news">News</a>
-                        </li>
-                    </ul>
-                    <div class="nav-actions">
-                        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">&#9790;</button>
-                        <button id="lang-toggle" class="lang-toggle-btn" aria-label="Toggle language">EN</button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <!-- Navbar -->
-
-        <!-- Background image -->
-        <div id="intro" class="bg-image vh-100 shadow-1-strong">
-            <div class="mask">
-                <div class="container d-flex align-items-center justify-content-center text-center h-100">
-                    <div class="text-white hero-content">
-                        <h1 class="mb-3" data-i18n="hero.title">Kylin-PBC: Periodic DFT from First Principles</h1>
-                        <h5 class="mb-4" data-i18n="hero.subtitle">C++17 &middot; GTO Basis Sets &middot; GTH Pseudopotentials &middot; MGDF / FTDF Integrals</h5>
-                        <div class="hero-actions">
-                            <a class="btn btn-outline-light btn-lg m-2" href="download.html" role="button" rel="nofollow"
-                                target="_self" data-i18n="hero.btn.download">Download Software</a>
-                            <a class="btn btn-outline-light btn-lg m-2" href="files/KylinManual.pdf" target="_self"
-                                role="button" data-i18n="hero.btn.manual">User Manual</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- 顶部：导航栏 + Hero 横幅 -->
+  <header>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand nav-link" target="_blank" href="https://kylin-pbc.com">
+          <strong>Kylin-PBC</strong>
+        </a>
+        <button class="navbar-toggler" type="button"
+          aria-controls="navbarExample01" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" data-i18n="nav.features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="publications.html" data-i18n="nav.publications">Publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="files/KylinManual.pdf" data-i18n="nav.manual">Manual</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="download.html" data-i18n="nav.download">Download</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html" data-i18n="nav.about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.html" data-i18n="nav.news">News</a>
+            </li>
+          </ul>
+          <div class="nav-actions">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">&#9790;</button>
+            <button id="lang-toggle" class="lang-toggle-btn" aria-label="Toggle language">EN</button>
+          </div>
         </div>
-        <!-- Background image -->
-    </header>
-    <!--Main Navigation-->
+      </div>
+    </nav>
 
-    <!--Main layout-->
-    <main>
-        <section class="section-block">
-            <div class="container">
-                <h4 class="section-title" data-i18n="dl.title">Download Kylin-PBC</h4>
-
-                <div class="content-card">
-                    <p class="text-dark"><strong data-i18n="dl.intro">
-                            Kylin-PBC is distributed as a pre-compiled binary for Linux platforms.
-                        </strong></p>
-                    <p class="text-muted" data-i18n="dl.version">
-                        Version 1.4 of Kylin-PBC was released in February 2026, featuring
-                        periodic DFT with GTO basis sets, GTH pseudopotentials, and advanced
-                        density fitting integral algorithms (MGDF/FTDF).
-                        The package is free of charge for academic users.
-                    </p>
-                    <p class="text-muted mb-0" data-i18n-html="dl.license">
-                        If you are interested in the Kylin-PBC package,
-                        please send a signed <a href="files/license.pdf">license file</a> to Mr. Xinyu Sun via <a
-                            href="mailto:sunxinyu347@gmail.com">sunxinyu347@gmail.com</a> for
-                        the trial version.
-                    </p>
-                </div>
-
-                <div class="content-card-highlight">
-                    <h5 class="mb-3" data-i18n-html="dl.kylinv.title"><strong>Kylin-V (Open Source)</strong></h5>
-                    <p class="text-muted mb-0" data-i18n-html="dl.kylinv.desc">
-                        <strong>Kylin-V is an easily-used and improved program for TD-DMRG (ex-ph coupling model) and
-                            vibrational heat-bath CI.</strong>
-                        It is open-source and free of charge for any users.
-                        Please visit <a href="https://gitee.com/nierenstein/kln-x">this Gitee page</a> to get the source
-                        code of Kylin-V.
-                    </p>
-                </div>
+    <!-- Hero 横幅 -->
+    <div id="intro" class="bg-image vh-100 shadow-1-strong">
+      <div class="mask">
+        <div class="container d-flex align-items-center justify-content-center text-center h-100">
+          <div class="text-white hero-content">
+            <h1 class="mb-3" data-i18n="hero.title">Kylin-PBC: Periodic DFT from First Principles</h1>
+            <h5 class="mb-4" data-i18n="hero.subtitle">C++17 &middot; GTO Basis Sets &middot; GTH Pseudopotentials &middot; MGDF / FTDF Integrals</h5>
+            <div class="hero-actions">
+              <a class="btn btn-outline-light btn-lg m-2" href="download.html" role="button" rel="nofollow"
+                data-i18n="hero.btn.download">Download Software</a>
+              <a class="btn btn-outline-light btn-lg m-2" href="files/KylinManual.pdf"
+                role="button" data-i18n="hero.btn.manual">User Manual</a>
             </div>
-        </section>
-    </main>
-    <!--Main layout-->
-
-    <!--Footer-->
-    <footer class="text-lg-start">
-        <!-- Copyright -->
-        <div class="text-center p-3" data-i18n-html="footer.copyright">
-            &copy; 2025 Copyright:
-            <a href="https://quantum-chemistry-cn.com">The Prof. Haibo Ma Group</a>
+          </div>
         </div>
-        <!-- Copyright -->
-    </footer>
-    <!--Footer-->
-    <!-- MDB -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
-    <!-- Mobile interactions -->
-    <script type="text/javascript" src="js/mobile-ui.js"></script>
-    <!-- Theme switcher -->
-    <script type="text/javascript" src="js/theme.js"></script>
-    <!-- Language switcher -->
-    <script type="text/javascript" src="js/i18n.js"></script>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主内容：下载信息 -->
+  <main>
+    <section class="section-block">
+      <div class="container">
+        <h4 class="section-title" data-i18n="dl.title">Download Kylin-PBC</h4>
+
+        <!-- Kylin-PBC 介绍与下载说明 -->
+        <div class="content-card">
+          <p class="text-dark">
+            <strong data-i18n="dl.intro">Kylin-PBC is distributed as a pre-compiled binary for Linux platforms.</strong>
+          </p>
+          <p class="text-muted" data-i18n="dl.version">
+            Version 1.4 of Kylin-PBC was released in February 2026, featuring
+            periodic DFT with GTO basis sets, GTH pseudopotentials, and advanced
+            density fitting integral algorithms (MGDF/FTDF).
+            The package is free of charge for academic users.
+          </p>
+          <p class="text-muted mb-0" data-i18n-html="dl.license">
+            If you are interested in the Kylin-PBC package,
+            please send a signed <a href="files/license.pdf">license file</a> to Mr. Xinyu Sun via
+            <a href="mailto:sunxinyu347@gmail.com">sunxinyu347@gmail.com</a> for the trial version.
+          </p>
+        </div>
+
+        <!-- Kylin-V 开源项目介绍 -->
+        <div class="content-card-highlight">
+          <h5 class="mb-3" data-i18n-html="dl.kylinv.title"><strong>Kylin-V (Open Source)</strong></h5>
+          <p class="text-muted mb-0" data-i18n-html="dl.kylinv.desc">
+            <strong>Kylin-V is an easily-used and improved program for TD-DMRG (ex-ph coupling model) and
+              vibrational heat-bath CI.</strong>
+            It is open-source and free of charge for any users.
+            Please visit <a href="https://gitee.com/nierenstein/kln-x">this Gitee page</a> to get the source
+            code of Kylin-V.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="text-lg-start">
+    <div class="text-center p-3" data-i18n-html="footer.copyright">
+      &copy; 2025 Copyright:
+      <a href="https://quantum-chemistry-cn.com">The Prof. Haibo Ma Group</a>
+    </div>
+  </footer>
+
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- 移动端交互（折叠导航等） -->
+  <script type="text/javascript" src="js/mobile-ui.js"></script>
+  <!-- 主题切换 -->
+  <script type="text/javascript" src="js/theme.js"></script>
+  <!-- 国际化 -->
+  <script type="text/javascript" src="js/i18n.js"></script>
 </body>
 
 </html>

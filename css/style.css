@@ -3,7 +3,7 @@
 
 /* ===== Global ===== */
 body {
-  font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Source Code Pro', 'Roboto Mono', monospace, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', 'Helvetica Neue', Arial, sans-serif;
   display: flex !important;
   flex-direction: column !important;
   min-height: 100vh !important;
@@ -81,6 +81,14 @@ h1, h2, h3, h4, h5, h6,
   font-size: 0.95rem;
 }
 
+/* 桌面端：hero 区域高度覆写（原各页面内联 <style> 中的共用规则） */
+@media (min-width: 992px) {
+  #intro {
+    margin-top: -58.59px;
+    height: 50vh !important;
+  }
+}
+
 /* ===== Buttons ===== */
 .btn-outline-light {
   border-color: var(--sci-accent);
@@ -138,6 +146,7 @@ a.text-primary:hover {
 }
 
 .navbar .nav-link {
+  color: var(--sci-heading) !important;
   border-radius: 10px;
   transition: color 0.2s, text-shadow 0.2s;
 }
@@ -198,6 +207,11 @@ main {
 @keyframes glow-pulse {
   0%, 100% { box-shadow: 0 0 6px rgba(var(--sci-accent-rgb), 0.4); }
   50%      { box-shadow: 0 0 16px rgba(var(--sci-accent-rgb), 0.8); }
+}
+
+/* ===== Logo 悬停遮罩（MDB hover-overlay 配合使用） ===== */
+.hover-overlay-mask {
+  background-color: rgba(251, 251, 251, 0.15);
 }
 
 /* ===== Cards ===== */
@@ -540,7 +554,11 @@ strong {
   flex-shrink: 0;
 }
 
-/* ===== Quick-start two-column ===== */
+/* ===== Quick Start 区块 ===== */
+.quickstart-desc {
+  margin-bottom: 2rem;
+}
+
 .quickstart-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

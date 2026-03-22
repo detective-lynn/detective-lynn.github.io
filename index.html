@@ -17,23 +17,10 @@
 </head>
 
 <body>
-  <!--Main Navigation-->
+  <!-- ==================== 顶部导航 + Hero 横幅 ==================== -->
   <header>
-    <style>
-      @media (min-width: 992px) {
-        #intro {
-          margin-top: -58.59px;
-          height: 50vh !important;
-        }
-      }
-
-      .navbar .nav-link {
-        color: var(--sci-heading) !important;
-      }
-    </style>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="z-index: 2000;">
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand nav-link" target="_blank" href="https://kylin-pbc.com">
           <strong>Kylin-PBC</strong>
@@ -70,9 +57,8 @@
         </div>
       </div>
     </nav>
-    <!-- Navbar -->
 
-    <!-- Background image -->
+    <!-- Hero 横幅：全屏背景 + 标题 + CTA 按钮 -->
     <div id="intro" class="bg-image vh-100 shadow-1-strong">
       <div class="mask">
         <div class="container d-flex align-items-center justify-content-center text-center h-100">
@@ -82,29 +68,30 @@
             <div class="hero-actions">
               <a class="btn btn-outline-light btn-lg m-2" href="download.html" role="button" rel="nofollow"
                 target="_self" data-i18n="hero.btn.download">Download Software</a>
-              <a class="btn btn-outline-light btn-lg m-2" href="files/KylinManual.pdf" target="_self" role="button" data-i18n="hero.btn.manual">User Manual</a>
+              <a class="btn btn-outline-light btn-lg m-2" href="files/KylinManual.pdf" target="_self" role="button"
+                data-i18n="hero.btn.manual">User Manual</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Background image -->
   </header>
-  <!--Main Navigation-->
 
-  <!--Main layout-->
+  <!-- ==================== 页面主体内容 ==================== -->
   <main>
-    <!--Section: About-->
+    <!-- 关于 Kylin-PBC：左文右图介绍 -->
     <section class="section-block">
       <div class="container">
         <div class="row">
           <div class="col-md-6 gx-5 mb-4">
             <h4 class="section-title" data-i18n="index.about.title">About Kylin-PBC</h4>
-            <p class="text-dark"><strong data-i18n="index.about.intro">
+            <p class="text-dark">
+              <strong data-i18n="index.about.intro">
                 Kylin-PBC is a periodic Density Functional Theory (DFT) program written in C++17,
                 designed for high-accuracy electronic structure calculations of crystalline and
                 periodic systems.
-              </strong></p>
+              </strong>
+            </p>
             <p class="text-muted" data-i18n="index.about.desc">
               The program employs Gaussian-type orbital (GTO) basis sets with
               Goedecker-Teter-Hutter (GTH) pseudopotentials, and evaluates Coulomb and
@@ -147,20 +134,20 @@
               </li>
             </ul>
           </div>
+          <!-- Logo 展示区 -->
           <div class="col-md-6 gx-5 mb-4 d-flex align-items-center justify-content-center">
             <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-              <img src="img/kylin_logo.png" class="img-fluid" />
+              <img src="img/kylin_logo.png" class="img-fluid" alt="Kylin-PBC Logo" />
               <a href="#!">
-                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                <div class="mask hover-overlay-mask"></div>
               </a>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!--Section: About-->
 
-    <!--Section: Technical Capabilities-->
+    <!-- 核心技术能力：6 张特性卡片 -->
     <section class="section-block section-alt text-center">
       <div class="container">
         <h4 class="section-title-center" data-i18n="index.tech.title">Technical Capabilities</h4>
@@ -264,13 +251,12 @@
         </div>
       </div>
     </section>
-    <!--Section: Technical Capabilities-->
 
-    <!--Section: Quick Start-->
+    <!-- 快速入门：双栏代码示例 -->
     <section class="section-block">
       <div class="container">
         <h4 class="section-title" data-i18n="index.qs.title">Quick Start</h4>
-        <p class="text-muted" style="margin-bottom: 2rem;" data-i18n-html="index.qs.desc">
+        <p class="text-muted quickstart-desc" data-i18n-html="index.qs.desc">
           Kylin-PBC requires two input files in the working directory: <strong>cell.txt</strong>
           (unit cell and atomic positions) and <strong>calc.txt</strong> (calculation parameters).
           Below is a minimal example for a silicon diamond single-point calculation.
@@ -301,25 +287,23 @@ Si  1.919800043    1.108397072    0.783755086</pre>
         </div>
       </div>
     </section>
-    <!--Section: Quick Start-->
   </main>
-  <!--Main layout-->
 
-  <!--Footer-->
+  <!-- ==================== 页脚 ==================== -->
   <footer class="text-lg-start">
     <div class="text-center p-3" data-i18n-html="footer.copyright">
       &copy; 2026 Copyright:
       <a href="https://quantum-chemistry-cn.com">The Prof. Haibo Ma Group</a>
     </div>
   </footer>
-  <!--Footer-->
+
   <!-- MDB -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Mobile interactions -->
+  <!-- 移动端交互（折叠导航等） -->
   <script type="text/javascript" src="js/mobile-ui.js"></script>
-  <!-- Theme switcher -->
+  <!-- 深色/浅色主题切换 -->
   <script type="text/javascript" src="js/theme.js"></script>
-  <!-- Language switcher -->
+  <!-- 中英文国际化 -->
   <script type="text/javascript" src="js/i18n.js"></script>
 </body>
 

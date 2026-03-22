@@ -2,192 +2,169 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Kylin-PBC: Periodic Density Functional Theory Program</title>
-    <!-- Google Fonts Roboto -->
-    <link rel="stylesheet" href="css/roboto.css" />
-    <!-- MDB -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- Theme switcher -->
-    <link rel="stylesheet" href="css/theme.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Kylin-PBC: Periodic Density Functional Theory Program</title>
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="css/roboto.css" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Theme switcher -->
+  <link rel="stylesheet" href="css/theme.css" />
 </head>
 
 <body>
-    <!--Main Navigation-->
-    <header>
-        <style>
-            /* Height for devices larger than 576px */
-            @media (min-width: 992px) {
-                #intro {
-                    margin-top: -58.59px;
-                    height: 50vh !important;
-                }
-            }
+  <!-- 页头：导航栏 + Hero 横幅 -->
+  <header>
+    <!-- 顶部导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand nav-link" target="_blank" href="https://kylin-pbc.com">
+          <strong>Kylin-PBC</strong>
+        </a>
+        <button class="navbar-toggler" type="button"
+          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" target="_self" data-i18n="nav.features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="publications.html" target="_self" data-i18n="nav.publications">Publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="files/KylinManual.pdf" target="_self" data-i18n="nav.manual">Manual</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="download.html" target="_self" data-i18n="nav.download">Download</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="about.html" data-i18n="nav.about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.html" target="_self" data-i18n="nav.news">News</a>
+            </li>
+          </ul>
+          <div class="nav-actions">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">&#9790;</button>
+            <button id="lang-toggle" class="lang-toggle-btn" aria-label="Toggle language">EN</button>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-            .navbar .nav-link {
-                color: var(--sci-heading) !important;
-            }
-        </style>
+    <!-- Hero 横幅区域 -->
+    <div id="intro" class="bg-image vh-100 shadow-1-strong">
+      <div class="mask">
+        <div class="container d-flex align-items-center justify-content-center text-center h-100">
+          <div class="text-white hero-content">
+            <h1 class="mb-3" data-i18n="hero.title">Kylin-PBC: Periodic DFT from First Principles</h1>
+            <h5 class="mb-4" data-i18n="hero.subtitle">C++17 &middot; GTO Basis Sets &middot; GTH Pseudopotentials &middot; MGDF / FTDF Integrals</h5>
+            <div class="hero-actions">
+              <a class="btn btn-outline-light btn-lg m-2" href="download.html" role="button" rel="nofollow"
+                target="_self" data-i18n="hero.btn.download">Download Software</a>
+              <a class="btn btn-outline-light btn-lg m-2" href="files/KylinManual.pdf" target="_self"
+                role="button" data-i18n="hero.btn.manual">Get User Guide</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark" style="z-index: 2000;">
-            <div class="container-fluid">
-                <!-- Navbar brand -->
-                <a class="navbar-brand nav-link" target="_blank" href="https://kylin-pbc.com">
-                    <strong>Kylin-PBC</strong>
+  <!-- 主体内容 -->
+  <main>
+    <!-- 开发团队介绍 -->
+    <section class="section-block">
+      <div class="container">
+        <h4 class="section-title" data-i18n="about.team.title">The Kylin Developer Team</h4>
+        <div class="row">
+          <div class="col-md-6 gx-5 mb-4">
+            <!-- 团队合照，去除卡片内边距以让图片撑满 -->
+            <div class="content-card p-0 overflow-hidden">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="img/group.jpg" class="img-fluid" alt="Kylin developer team group photo" />
+                <a href="#!">
+                  <div class="mask hover-overlay-mask"></div>
                 </a>
-                <button class="navbar-toggler" type="button"
-                    aria-controls="navbarExample01" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarExample01">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html" target="_self" data-i18n="nav.features">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="publications.html" target="_self" data-i18n="nav.publications">Publications</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="files/KylinManual.pdf" target="_self" data-i18n="nav.manual">Manual</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="download.html" target="_self" data-i18n="nav.download">Download</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" aria-current="page" href="about.html" data-i18n="nav.about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="news.html" target="_self" data-i18n="nav.news">News</a>
-                        </li>
-                    </ul>
-                    <div class="nav-actions">
-                        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">&#9790;</button>
-                        <button id="lang-toggle" class="lang-toggle-btn" aria-label="Toggle language">EN</button>
-                    </div>
-                </div>
+              </div>
             </div>
-        </nav>
-        <!-- Navbar -->
-
-        <!-- Background image -->
-        <div id="intro" class="bg-image vh-100 shadow-1-strong">
-            <div class="mask">
-                <div class="container d-flex align-items-center justify-content-center text-center h-100">
-                    <div class="text-white hero-content">
-                        <h1 class="mb-3" data-i18n="hero.title">Kylin-PBC: Periodic DFT from First Principles</h1>
-                        <h5 class="mb-4" data-i18n="hero.subtitle">C++17 &middot; GTO Basis Sets &middot; GTH Pseudopotentials &middot; MGDF / FTDF Integrals</h5>
-                        <div class="hero-actions">
-                            <a class="btn btn-outline-light btn-lg m-2" href="download.html" role="button" rel="nofollow"
-                                target="_self" data-i18n="hero.btn.download">Download Software</a>
-                            <a class="btn btn-outline-light btn-lg m-2" href="files/KylinManual.pdf" target="_self"
-                                role="button" data-i18n="hero.btn.manual">Get User Guide</a>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="col-md-6 gx-5 mb-4">
+            <div class="content-card">
+              <p class="text-dark"><strong data-i18n="about.team.intro">
+                  Kylin is developed by the research group of Prof. Dr. Haibo Ma.
+                  The developers are
+                </strong></p>
+              <ul>
+                <li data-i18n="about.team.member1">Dr. Yinxuan Song (Post-doc researcher);</li>
+                <li data-i18n="about.team.member2">Mr. Xinyu Sun (Phd student);</li>
+                <li data-i18n="about.team.member3">Mr. Jiaao Su (Graduate student);</li>
+                <li data-i18n="about.team.member4">Mr. Wei Huang (Graduate student);</li>
+                <li data-i18n="about.team.member5">Mr. Zhaoxuan Xie (now Phd student at LMU München);</li>
+                <li data-i18n="about.team.member6">Dr. Yifan Cheng (now Post-doc researcher at MPI-FKF);</li>
+                <li data-i18n="about.team.member7">Dr. Yingqi Tian (now Post-doc researcher at Computer Network Information Center,
+                  Chinese Academy of Sciences);</li>
+                <li data-i18n="about.team.member8">Mr. Fangwen Peng (now at Dreame Technology);</li>
+                <li data-i18n="about.team.member9">Mr. Jianhao Li (now Phd student at University of Minnesota);</li>
+                <li data-i18n="about.team.member10">Mr. Lingzhi Zhang (now graduate student at University of Tokyo);</li>
+                <li data-i18n="about.team.member11">Dr. Yingjin Ma (now researcher at Computer Network Information Center, Chinese
+                  Academy of Sciences);</li>
+                <li data-i18n="about.team.member12">Dr. Zhen Luo (now at BDF Qingdao Technology);</li>
+                <li data-i18n="about.team.member13">Prof. Dr. Haibo Ma.</li>
+              </ul>
             </div>
+          </div>
         </div>
-        <!-- Background image -->
-    </header>
-    <!--Main Navigation-->
+      </div>
+    </section>
 
-    <!--Main layout-->
-    <main>
-        <!--Section: Team-->
-        <section class="section-block">
-            <div class="container">
-                <h4 class="section-title" data-i18n="about.team.title">The Kylin Developer Team</h4>
-                <div class="row">
-                    <div class="col-md-6 gx-5 mb-4">
-                        <div class="content-card" style="padding: 0; overflow: hidden;">
-                            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                <img src="img/group.jpg" class="img-fluid" />
-                                <a href="#!">
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 gx-5 mb-4">
-                        <div class="content-card">
-                            <p class="text-dark"><strong data-i18n="about.team.intro">
-                                    Kylin is developed by the research group of Prof. Dr. Haibo Ma.
-                                    The developers are
-                                </strong></p>
-                            <ul>
-                                <li data-i18n="about.team.member1">Dr. Yinxuan Song (Post-doc researcher);</li>
-                                <li data-i18n="about.team.member2">Mr. Xinyu Sun (Phd student);</li>
-                                <li data-i18n="about.team.member3">Mr. Jiaao Su (Graduate student);</li>
-                                <li data-i18n="about.team.member4">Mr. Wei Huang (Graduate student);</li>
-                                <li data-i18n="about.team.member5">Mr. Zhaoxuan Xie (now Phd student at LMU München);</li>
-                                <li data-i18n="about.team.member6">Dr. Yifan Cheng (now Post-doc researcher at MPI-FKF);</li>
-                                <li data-i18n="about.team.member7">Dr. Yingqi Tian (now Post-doc researcher at Computer Network Information Center,
-                                    Chinese Academy of Sciences);</li>
-                                <li data-i18n="about.team.member8">Mr. Fangwen Peng (now at Dreame Technology);</li>
-                                <li data-i18n="about.team.member9">Mr. Jianhao Li (now Phd student at University of Minnesota);</li>
-                                <li data-i18n="about.team.member10">Mr. Lingzhi Zhang (now graduate student at University of Tokyo);</li>
-                                <li data-i18n="about.team.member11">Dr. Yingjin Ma (now researcher at Computer Network Information Center, Chinese
-                                    Academy of Sciences);</li>
-                                <li data-i18n="about.team.member12">Dr. Zhen Luo (now at BDF Qingdao Technology);</li>
-                                <li data-i18n="about.team.member13">Prof. Dr. Haibo Ma.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Section: Team-->
-
-        <!--Section: Research-->
-        <section class="section-block section-alt">
-            <div class="container">
-                <h4 class="section-title" data-i18n="about.research.title">Research Directions</h4>
-                <div class="content-card-highlight">
-                    <p class="text-muted" data-i18n="about.research.desc">
-                        Ma group is dedicated to developing new chemical methods for strongly correlated quantum
-                        systems and excited systems and applications.
-                        We are focusing on the study of:
-                    </p>
-                    <ul>
-                        <li data-i18n="about.research.item1">electronic structure of strongly correlated quantum systems;</li>
-                        <li data-i18n="about.research.item2">quantum dynamics simulation and spectroscopy;</li>
-                        <li data-i18n="about.research.item3">optoelectronics and photocatalysis.</li>
-                    </ul>
-                    <p class="text-dark mb-0" data-i18n-html="about.research.visit">
-                        Please visit the group website
-                        <a href="https://quantum-chemistry-cn.com">https://quantum-chemistry-cn.com</a>
-                        for more information.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <!--Section: Research-->
-    </main>
-    <!--Main layout-->
-
-    <!--Footer-->
-    <footer class="text-lg-start">
-        <!-- Copyright -->
-        <div class="text-center p-3" data-i18n-html="footer.copyright">
-            © 2026 Copyright:
-            <a href="https://quantum-chemistry-cn.com">The Prof. Haibo Ma Group</a>
+    <!-- 研究方向 -->
+    <section class="section-block section-alt">
+      <div class="container">
+        <h4 class="section-title" data-i18n="about.research.title">Research Directions</h4>
+        <div class="content-card-highlight">
+          <p class="text-muted" data-i18n="about.research.desc">
+            Ma group is dedicated to developing new chemical methods for strongly correlated quantum
+            systems and excited systems and applications.
+            We are focusing on the study of:
+          </p>
+          <ul>
+            <li data-i18n="about.research.item1">electronic structure of strongly correlated quantum systems;</li>
+            <li data-i18n="about.research.item2">quantum dynamics simulation and spectroscopy;</li>
+            <li data-i18n="about.research.item3">optoelectronics and photocatalysis.</li>
+          </ul>
+          <p class="text-dark mb-0" data-i18n-html="about.research.visit">
+            Please visit the group website
+            <a href="https://quantum-chemistry-cn.com">https://quantum-chemistry-cn.com</a>
+            for more information.
+          </p>
         </div>
-        <!-- Copyright -->
-    </footer>
-    <!--Footer-->
-    <!-- MDB -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
-    <!-- Mobile interactions -->
-    <script type="text/javascript" src="js/mobile-ui.js"></script>
-    <!-- Theme switcher -->
-    <script type="text/javascript" src="js/theme.js"></script>
-    <!-- Language switcher -->
-    <script type="text/javascript" src="js/i18n.js"></script>
+      </div>
+    </section>
+  </main>
+
+  <!-- 页脚：版权信息 -->
+  <footer class="text-lg-start">
+    <div class="text-center p-3" data-i18n-html="footer.copyright">
+      © 2026 Copyright:
+      <a href="https://quantum-chemistry-cn.com">The Prof. Haibo Ma Group</a>
+    </div>
+  </footer>
+
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- 移动端交互（折叠导航等） -->
+  <script type="text/javascript" src="js/mobile-ui.js"></script>
+  <!-- 主题切换（亮/暗模式） -->
+  <script type="text/javascript" src="js/theme.js"></script>
+  <!-- 多语言切换 -->
+  <script type="text/javascript" src="js/i18n.js"></script>
 </body>
 
 </html>

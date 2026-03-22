@@ -1,4 +1,4 @@
-/* === Theme Variables === */
+/* ── 主题变量：暗色（默认） ── */
 
 :root,
 [data-theme="dark"] {
@@ -30,6 +30,8 @@
   --sci-scrollbar-hover: rgba(0, 229, 255, 0.4);
 }
 
+/* ── 主题变量：亮色 ── */
+
 [data-theme="light"] {
   --sci-bg: #F4F7FA;
   --sci-bg-light: #E8EDF2;
@@ -59,15 +61,13 @@
   --sci-scrollbar-hover: rgba(8, 145, 178, 0.45);
 }
 
-/* === Smooth transition === */
+/* ── 全局过渡：主题切换时背景/文字颜色平滑渐变 ── */
+
 html {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* === Light-mode navbar text fix === */
-[data-theme="light"] .navbar .nav-link {
-  color: #334155 !important;
-}
+/* ── 导航栏：汉堡按钮（移动端折叠触发器） ── */
 
 .navbar-toggler {
   color: #b0b8c4;
@@ -84,8 +84,19 @@ html {
   background-size: 100%;
 }
 
+/* 深色模式：汉堡图标反色变亮 */
+[data-theme="dark"] .navbar-toggler-icon {
+  filter: invert(1) brightness(80%);
+}
+
 .navbar.navbar-scrolled {
   background: rgba(10, 14, 26, 0.9) !important;
+}
+
+/* ── 导航栏：亮色模式覆盖 ── */
+
+[data-theme="light"] .navbar .nav-link {
+  color: #334155 !important;
 }
 
 [data-theme="light"] .navbar-brand strong {
@@ -112,7 +123,8 @@ html {
   background: rgba(255, 255, 255, 0.95) !important;
 }
 
-/* === Light-mode hero text remains white (over gradient) === */
+/* ── Hero 区域：亮色模式覆盖 ── */
+
 [data-theme="light"] #intro h1 {
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
 }
@@ -121,7 +133,6 @@ html {
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* === Light-mode hero buttons: softer blue for harmony === */
 [data-theme="light"] #intro .btn-outline-light {
   border-color: #3E6287;
   color: #3E6287;
@@ -134,41 +145,9 @@ html {
   box-shadow: 0 0 18px rgba(62, 98, 135, 0.32);
 }
 
-/* === Theme toggle button === */
-.theme-toggle-btn {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #fff;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  font-size: 1.1rem;
-  margin-left: 12px;
-  flex-shrink: 0;
-}
+/* ── 主题 / 语言切换按钮：共用基础样式 ── */
 
-.theme-toggle-btn:hover {
-  border-color: var(--sci-accent);
-  color: var(--sci-accent);
-  box-shadow: 0 0 10px rgba(var(--sci-accent-rgb), 0.3);
-}
-
-[data-theme="light"] .theme-toggle-btn {
-  border-color: rgba(8, 145, 178, 0.3);
-  color: #334155;
-}
-
-[data-theme="light"] .theme-toggle-btn:hover {
-  border-color: #0891B2;
-  color: #0891B2;
-}
-
-/* === Language toggle button === */
+.theme-toggle-btn,
 .lang-toggle-btn {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -181,35 +160,49 @@ html {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* 主题切换按钮：差异属性 */
+.theme-toggle-btn {
+  font-size: 1.1rem;
+  margin-left: 12px;
+}
+
+/* 语言切换按钮：差异属性 */
+.lang-toggle-btn {
   font-family: 'Source Code Pro', monospace;
   font-size: 0.75rem;
   font-weight: 700;
   margin-left: 8px;
-  flex-shrink: 0;
 }
 
+.theme-toggle-btn:hover,
 .lang-toggle-btn:hover {
   border-color: var(--sci-accent);
   color: var(--sci-accent);
   box-shadow: 0 0 10px rgba(var(--sci-accent-rgb), 0.3);
 }
 
+[data-theme="light"] .theme-toggle-btn,
 [data-theme="light"] .lang-toggle-btn {
   border-color: rgba(8, 145, 178, 0.3);
   color: #334155;
 }
 
+[data-theme="light"] .theme-toggle-btn:hover,
 [data-theme="light"] .lang-toggle-btn:hover {
   border-color: #0891B2;
   color: #0891B2;
 }
 
-/* 强制深色模式下的汉堡菜单图标反色变亮 (变白/浅灰) */
-[data-theme="dark"] .navbar-toggler-icon {
-  filter: invert(1) brightness(80%);
-}
+/* ── 移动端：导航栏展开时高度自适应 ── */
 
-/* 可选：给深色模式下的点击按钮加一个半透明的边框，让它更明显 */
-[data-theme="dark"] .navbar-toggler {
-  border-color: rgba(176, 184, 196, 0.5); /* 浅灰色边框 */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    max-height: none !important;
+    height: auto !important;
+    overflow-y: visible !important;
+    padding-bottom: 20px !important;
+  }
 }
